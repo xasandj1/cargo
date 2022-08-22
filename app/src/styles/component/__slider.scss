@@ -1,0 +1,139 @@
+.slider{
+    height: 700px;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+    @include media(576){
+        height: 400px;
+    }
+    &__inner{
+        width: 100%;
+        height: 100%;
+    }
+    &__item{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+        opacity: 0;
+
+        &.active{
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        @include media(320){
+            object-fit: cover;
+        }
+    }
+    &__left, &__right{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 15%;
+        z-index: 9;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    &__left{
+        left: 0;
+        & i{
+            font-size: 41px;
+            color: #fff;
+            &::after{
+                content: "\f053";
+            }
+        }
+    }
+    &__right{
+        right: 0;
+        & i{
+            font-size: 41px;
+            color: #fff;
+            &::after{
+                content: "\f054";
+            }
+        }
+    }
+    &__info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 70px;
+        color: #fff;
+        text-transform: uppercase;
+        width: 490px;
+        @include media(576){
+            width: 90%;
+            font-size: 30px;
+            line-height: 36px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: #fff;
+        width: 345px;
+        margin-bottom: 37px;
+        @include media(576){
+            width: 80%;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__btn{
+        width: 293px;
+        padding: 22px 0;
+        background: $gold;
+        border-radius: 90px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @include media(576){
+            padding: 18px 0;
+            margin: auto;
+        }
+
+        & span{
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        & i{
+            font-size: 26px;
+            color: #B26519;
+
+            &::after{
+                content: "\f0a9";
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import './layout/fonts.scss',
+        './layout/_var',
+        './layout/nav.scss',
+        './layout/header.scss',
+        './component/_slider',
+        './component/_apply',
+        './component/_choose',
+        './component/_option',
+        './component/_service',
+        './component/_accardion',
+        './layout/footer.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat";
+}
+body{
+    background: #282B38;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.section__title{
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 85px;
+        height: 2px;
+        background: $gold;
+        bottom: 0;
+    }
+    @include media(750){
+        text-align: center;
+        font-size: 30px;
+    }
+}

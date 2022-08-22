@@ -1,0 +1,171 @@
+.option{
+    margin-top: 60px;
+    & .container{
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+        &:hover{
+            .option__media{
+                transform: translateY(0%);
+            }
+        }
+    }
+    &__video{
+        width: 100%;
+    }
+    &__speed-watch{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 20px black;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &__media{
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(100%);
+        transition: .3s;
+
+        @include media(750){
+            flex-direction: column;
+        }
+        @include media(450){
+            padding: 10px;
+        }
+
+        & i{
+            color: #fff;
+            font-size: 20px;
+            padding: 0 5px;
+            cursor: pointer;
+            &:hover{
+                color: $gold;
+            }
+        }
+    }
+    &__controls{
+
+    }
+    &__prev-speed{
+        &::after{
+            content: "\f049";
+        }
+    }
+    &__prev{
+        &::after{
+            content: "\f0d9";
+        }
+    }
+    &__play{
+        &::after{
+            content: "\f04b";
+        }
+        &.active{
+            &::after{
+                content: "\f04c";
+            }
+        }
+    }
+    &__next{
+        &::after{
+            content: "\f0da";
+        }
+    }
+    &__next-speed{
+        &::after{
+            content: "\f050";
+        }
+    }
+    &__progress{
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px;
+        @include media(750){
+            width: 100%;
+        }
+    }
+    &__time{
+        color: #fff;
+        font-size: 25px;
+        width: 75px;
+        @include media(450){
+            font-size: 16px;
+            width: 45px;
+        }
+    }
+    &__duration{
+        height: 5px;
+        flex-grow: 1;
+        background: #fff;
+        margin:0 10px;
+        cursor: pointer;
+    }
+    &__line{
+        height: 100%;
+        width: 0%;
+        background: $gold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__ruler{
+        width: 15px;
+        height: 15px;
+        background: $gold;
+        border-radius: 50%;
+    }
+    &__volume{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__volume-icon{
+        width: 35px;
+        color: #fff;
+        font-size: 25px;
+        &.mute{
+            &::after{
+                content: "\f2e2";
+            }
+        }
+        &.down{
+            &::after{
+                content: "\f027";
+            }
+        }
+        &.normal{
+            &::after{
+                content: "\f6a8";
+            }
+        }
+        &.up{
+            &::after{
+                content: "\f028";
+            }
+        }
+    }
+    &__volume-range{
+
+    }
+}

@@ -1,0 +1,98 @@
+.nav{
+    padding: 25px 0;
+
+    & .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-content{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(1100){
+            width: 78%;
+        }        
+        @include media(992){
+            display: none;
+        }
+        &.active{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 50vw;
+            background: #282b38;
+            z-index: 10;
+            @include media(450){
+                width: 100vw;
+            }
+
+        }
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media(992){
+            flex-direction: column;
+        }
+    }
+    &__item{
+        margin-right: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+        @include media(992){
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+    &__link{
+        color: #fff;
+        text-decoration: none;
+        transition: 0.2s;
+        display: block;
+        &:hover{
+            color: $gold;
+            transform: scale(1.1);
+        }
+    }
+    &__apply{
+        padding: 14px 27px;
+        background: $gold;
+        border-radius: 90px;
+        font-weight: 600;
+        font-size: 15px;
+        color: #fff;
+        border: none;
+        &:hover{
+            background: $green;
+        }
+    }
+    &__btn{
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        color: #fff;
+        position: relative;
+        z-index: 10;
+        display: none;
+        &::after{
+            content: "\f0c9";
+        }
+        &.active{
+            &::after{
+                content: "\f00d";
+            }
+        }
+        @include media(992){
+            display: block;
+        }
+    }
+}

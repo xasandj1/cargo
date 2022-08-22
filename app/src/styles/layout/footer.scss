@@ -1,0 +1,117 @@
+.footer{
+    margin-top: 80px;
+    &__block{
+        padding:40px 0;
+        border-top: 2px solid $gold;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include media(1100){
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 250px;
+        @include media(1100){
+            margin-top: 20px;
+        }
+    }
+    &__logo{
+        margin-bottom: 25px;
+    }
+    &__contact{
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFF;
+        margin-bottom: 10px;
+    }
+    &__address{
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFF;
+        margin-bottom: 10px;
+    }
+    &__address-info{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 23px;
+        color: #FFF;
+        margin-bottom: 20px;
+    }
+    &__social{
+        display: flex;
+        justify-content: start;
+    }
+    &__insta{
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: linear-gradient(0deg, #E09B3D 0.46%, #C74C4D 22.72%, #C21975 60.76%, #7024C4 93.22%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & i{
+            color: #FFF;
+            font-size: 17px;
+            &::after{
+                content: "\f16d";
+            }
+        }
+    }
+    &__facebook{
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #039BE5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        & i{
+            color: #FFF;
+            font-size: 17px;
+            &::after{
+                content: "\f39e";
+            }
+        }
+    }
+    &__telegram{
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #039BE5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & i{
+            color: #FFF;
+            font-size: 17px;
+            &::after{
+                content: "\f3fe";
+            }
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 20px;
+        color: #FFF;
+        margin-bottom: 14px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__item{
+        margin-bottom: 10px;
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 16px;
+        color: #85899C;
+    }
+}

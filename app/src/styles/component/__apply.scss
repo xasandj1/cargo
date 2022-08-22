@@ -1,0 +1,295 @@
+.apply{
+    margin-top: 40px;
+    @include media(1400){
+        margin-bottom: 20px;
+    }
+    & .container{
+        display: flex;
+        align-items: center;
+    }
+    &__info{
+        width: 625px;
+        @include media(1100){
+            width: 100%;
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 45px;
+        color: #fff;
+        margin-bottom: 60px;
+        position: relative;
+        & span{
+            position: absolute;
+            width: 15%;
+            height: 2px;
+            background: $green;
+            display: block;
+            right: 5%;
+            bottom: 20%;
+        }
+    }
+    &__box{
+        position: relative;
+    }
+
+    &__img{
+        width: 400px;
+        @include media(1100){
+            display: none;
+        }
+        & img{
+            @include media(1400){
+                width: 100%;
+            }
+        }
+    }
+    &__step{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        transform: translateY(-50%);
+        background: #282B38;
+        border: 2px solid #363A4D;
+        &.active{
+            background: $green;
+        }
+        &:nth-child(2){
+            transform: translate(200%, -50%);
+        }
+        &:nth-child(3){
+            transform: translate(400%, -50%);
+        }
+        @include media(450){
+            &:nth-child(2){
+                transform: translate(150%, -50%);
+            }
+            &:nth-child(3){
+                transform: translate(300%, -50%);
+            }
+        }
+    }
+    &__block{
+        background: $gray;
+        border-radius: 20px;
+        padding: 70px 50px 40px;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &.active{
+            display: flex;
+
+        }
+
+    }
+    &__input{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        @include media(650){
+            width: 100%;
+        }
+        & label{
+            font-weight: 600;
+            font-size: 15px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        & input{
+            width: 245px;
+            padding: 18px 20px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-size: 15px;
+            color: black;
+            @include media(650){
+                width: 100%;
+            }
+        }
+    }
+    &__checkbox{
+        display: flex;
+        flex-direction: column;
+    }
+    &__check{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        & p{
+            font-weight: 600;
+            font-size: 15px;
+            color: #fff;
+            margin-left: 10px;
+        }
+        & input{
+            width: 25px;
+            height: 25px;
+        }
+    }
+    &__photo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    &__photo-name{
+        font-weight: 400;
+        font-size: 15px;
+        color: #fff;
+    }
+    &__photo-link{
+        font-weight: 400;
+        font-size: 13px;
+        color: #E53535;
+        cursor: pointer;
+    }
+    &__download{
+        width: 100%;
+        border: 1px dashed rgba(255, 255, 255, 0.26);
+        border-radius: 10px;
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+    &__btn{
+        padding: 22px 0;
+        width: 253px;
+        border-radius: 90px;
+        background: $gold;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+
+        & span{
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        & i{
+            font-size: 26px;
+            color: #B16519;
+            &::after{
+                content: "\f0a9";
+            }
+        }
+    }
+}
+
+// application 2
+
+.apply{
+
+    &__name{
+        width: 100%;
+
+        & input{
+            width: 100%;
+        }
+    }
+    &__area{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        & label{
+            font-weight: 600;
+            font-size: 15px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        & textarea{
+            width: 100%;
+            padding: 18px 20px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            font-weight: 400;
+            font-size: 15px;
+            color: black;
+        }
+    }
+    &__btn-link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 40px;
+    }
+    &__btn-back{
+        border: 1px solid #E58D35;
+        border-radius: 90px;
+        padding: 22px 46px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+// application 3
+
+.apply{
+    &__block-check{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__check-circle{
+        font-size: 112px;
+        color: $green;
+        margin-bottom: 30px;
+        &::after{
+            content: "\f058";
+        }
+    }
+    &__check-title{
+        font-weight: 700;
+        font-size: 32px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    &__check-text{
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 35px;
+    }
+    &__list-title{
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    &__list{
+        padding-left: 30px;
+    }
+    &__item{
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        list-style: outside;
+    }
+}

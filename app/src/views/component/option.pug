@@ -1,0 +1,21 @@
+section.option 
+    h2.section__title Варианты доставки грузов из Китая
+    .container
+        video.option__video(src="./videos/video.mp4" poster="./images/poster.jpeg")
+        p.option__speed-watch 1x
+        .option__media
+            .option__controls
+                i.far.option__prev-speed
+                i.far.option__prev
+                i.far.option__play
+                i.far.option__next
+                i.far.option__next-speed
+            .option__progress 
+                p.option__time#start 00:00
+                .option__duration 
+                    .option__line 
+                        .option__ruler
+                p.option__time#end 00:00
+            .option__volume 
+                i.far.option__volume-icon.normal
+                input(type="range", name="").option__volume-range

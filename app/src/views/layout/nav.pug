@@ -1,0 +1,12 @@
+nav.nav 
+    .container 
+        a.nav__logo(href="#!") 
+            img(src="./images/logo.png", alt="logo")
+        .nav-content
+            ul.nav__list 
+                each link in ['Цены и сроки','Услуги','О компании','Контакты','Оформить груз']
+                    li.nav__item 
+                        a.nav__link(href="#!")= link
+            button.nav__apply Оставить заявку
+        button.nav__btn.far
+                        
